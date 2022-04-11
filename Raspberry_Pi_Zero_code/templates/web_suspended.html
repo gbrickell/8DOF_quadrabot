@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <!-- version: 01.00 -->
+  <!-- file name: select_mode.html -->
+  <!-- quadrabot walking robot controller mode selection HTML  -->
+  <!-- Author: Enmore -->
+  <!-- Date: 220329 -->
+
+{% extends 'quadrabot_layout.html' %}
+
+{% block content %}  
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="select container">
+
+    <!-- 1st row of the selection interface: option to select demo mode  -->
+	<div class="first row">
+      <div style="margin-top: 3%; width: auto; padding-left: 0%; padding-right: 0%; color: #000; font-size: 18px; text-align:center;">
+        <b>** web currently suspended - change the switch settings for another mode **<br />
+        ** or if the switches are reset to  web mode
+        click the RESTART button below **</b>
+      </div>
+    </div>
+
+    <!-- 2nd restart by going to select mode  -->
+	<div class="second row">
+      <div style="margin-top: 3%; width: auto; padding-left: 15%; padding-right: 15%;">
+        <a class="button button-primary u-full-width" href="/">restart web use</a>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+

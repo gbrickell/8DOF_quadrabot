@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <!-- version: 01.10 -->
+  <!-- file name: select_mode.html -->
+  <!-- quadrabot walking robot controller mode selection HTML  -->
+  <!-- Author: Enmore -->
+  <!-- Date: 220329 -->
+
+{% extends 'quadrabot_layout.html' %}
+
+{% block content %}  
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="select container">
+
+    <!-- 1st row of the selection interface: option to select demo mode  -->
+	<div class="first row">
+      <div style="margin-top: 3%; width: auto; padding-left: 15%; padding-right: 15%;">
+        <a class="button button-primary u-full-width" href="/demo_mode">demo mode</a>
+      </div>
+    </div>
+
+    <!-- 2nd row of the selection interface: options to select autonoumous modes  -->
+	<div class="second row">
+      <div style="margin-top: 3%; width: auto; padding-left: 15%; padding-right: 15%;">
+        <a class="button button-primary u-full-width" href="/autonomous_mode">autonomous mode</a>
+      </div>
+    </div>
+
+    <!-- 3rd row of the selection interface: options to select run about modes  -->
+	<div class="third row">
+      <div style="margin-top: 3%; width: auto; padding-left: 15%; padding-right: 15%;">
+        <a class="button button-primary u-full-width" href="/run_about_mode">run about mode</a>
+      </div>
+    </div>
+
+    <!-- 4th row of the selection interface: option to select calibration mode  -->
+	<div class="fourth row">
+      <div style="margin-top: 3%; width: auto; padding-left: 15%; padding-right: 15%;">
+        <a class="button button-primary u-full-width" href="/maintenance_mode">system maintenance</a>
+      </div>
+    </div>
+
+    <!-- 5th row of the selection interface: option to try to quit web control and go back to switch control  -->
+	<div class="fifth row">
+      <div style="margin-top: 3%; width: auto; padding-left: 15%; padding-right: 15%;">
+        <a class="button button-primary u-full-width " href="/switch_control_mode">go back to switch control mode</a>
+      </div>
+    </div>
+
+    <!-- 6th row of the selection interface: option to reboot system -->
+	<div class="sixth row">
+      <div style="margin-top: 3%; width: auto; padding-left: 15%; padding-right: 15%;">
+        <a class="button button-primary u-full-width " href="/reboot">reboot system</a>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+  <!-- version: 01.00 -->
+  <!-- file name:demo_mode.html -->
+  <!-- quadrabot walking robot controller demo options HTML  -->
+  <!-- Author: Enmore  -->
+  <!-- Date: 220329 -->
+
+{% extends 'quadrabot_layout.html' %}
+
+{% block content %}
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="demo_mode container">
+  
+
+  	<!-- 1st row of the demo interface: left, forward, right -->  
+    <div class="first row">
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/left">Turn Left</a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/forward">Go Forward</a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/right">Turn Right</a>
+      </div>
+    </div>
+
+  	<!-- 2nd row of the demo interface: anti-clockwise, back, clockwise -->
+    <div class="second row">
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/anti-clockwise">About Turn Left</a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/back">Go Back</a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/clockwise">About Turn Right</a>
+      </div>
+    </div>
+
+
+  	<!-- 3rd row of the demo interface: wave FRL and FLL -->
+    <div class="third row">
+      <div style="margin-top: 0%; width: 50px;">  </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/wavefll">Wave Front Left Leg</a>
+      </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/wavefrl">Wave Front Right Leg</a>
+      </div>
+    </div>
+	
+  	<!-- 4th row of the demo interface: wave BRL and BLL -->
+    <div class="fourth row">
+      <div style="margin-top: 0%; width: 50px;">  </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/wavebll">Wave Back Left Leg</a>
+      </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/wavebrl">Wave Back Right Leg</a>
+      </div>
+    </div>	
+
+  	<!-- 5th row of the demo interface: squat and bow -->
+    <div class="fifth row">
+      <div style="margin-top: 0%; width: 50px;">  </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/squat">Squat position</a>
+      </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/bow">Bow down</a>
+      </div>
+    </div>	
+	
+  	<!-- 6th row of the demo interface: reset quadrabot and select new mode -->
+	<div class="sixth row">
+      <div style="margin-top: 0%; width: 50px;">  </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/demo_mode/reset">Reset quadrabot</a>
+      </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/">Select new mode</a>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->

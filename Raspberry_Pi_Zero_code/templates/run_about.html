@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+  <!-- version: 01.00 -->
+  <!-- file name: run_about.html -->
+  <!-- quadrabot walking robot controller run about option HTML  -->
+  <!-- Author: Enmore -->
+  <!-- Date: 220329 -->
+
+{% extends 'quadrabot_layout.html' %}
+
+{% block content %} 
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="run_about container">
+  
+  	<!-- 1st row of the run about interface: left, forward, right -->  
+    <div class="first row">
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/run_about_mode/left">Turn Left 90<sup>o</sup></a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/run_about_mode/forward">Go Forward</a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/run_about_mode/right">Turn Right 90<sup>o</sup></a>
+      </div>
+    </div>
+
+  	<!-- 3rd row of the run about interface: clockwise, back, anticlockwise -->
+    <div class="third row">
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/run_about_mode/spin_left">About Turn Left 180<sup>o</sup></a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/run_about_mode/back">Go Back</a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/run_about_mode/spin_right">About Turn Right 180<sup>o</sup></a>
+      </div>
+    </div>
+
+  	<!-- 4th row of the run about interface: stop -->
+    <div class="fourth row">
+      <div class="one-third column" style="margin-top: 3%">
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/run_about_mode/stop">Stop</a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+      </div>
+    </div>
+
+  	<!-- 5th row of the run about interface: select new mode -->
+	<div class="fifth row">
+      <div class="one-third column" style="margin-top: 3%">
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/">Select new mode</a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+      </div>
+    </div>
+
+  </div>
+
+{% endblock %}
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -1,0 +1,35 @@
+  <!-- version: 1.00 -->
+  <!-- file name: quadrabot_header_insert.html -->
+  <!-- Flask web interface - a 'partial' template for insertion in other pages  -->
+  <!--  to provide the HTML for the 'header' area of each quadrabot web page -->
+  <!-- Author: Enmore -->
+  <!-- Date: 220329 -->
+
+  	<!-- header area at the top of the page content-->
+	<header>
+      <div class="container">
+	  
+       <div class="divcenter">
+	   	<div style="width: auto; height: 200px; padding-left: 0; padding-right: 20px; margin-left: auto; margin-right: 0px; ">
+		     <img src="{{ url_for('static', filename='images/8DOF_quadrabot_20220329_103800232_250h.jpg') }}" 
+			 height="200px" style="display: block; float: right;"></div>
+	  	<div style="margin-top: 1%; width: auto; padding-left: 0%; padding-right: 0%; text-align:center">
+	    <h3>8DOF quadrabot</h3>
+		<h4>{{ title }}</h4>
+		<h5>at: {{ time_now }}</h5>
+		</div>
+		<div style="width: auto; height: 200px; padding-left: 20px; padding-right: 0px; margin-left: 0px; margin-right: auto;">
+		     <img src="{{ url_for('static', filename='images/8DOF_quadrabot_20220329_103837756_250h.jpg') }}" 
+			 height="200px" style="display: block"></div>
+	   </div>
+	   
+       <div class="divcenter">	   
+	  {% if stat_text|length > 0 %}
+	  	<div style="margin-top: 1%; width: auto; margin-left: auto; margin-right: auto; text-align:center">
+        	<h5 style="margin-bottom: 0;">{{stat_text}}</h5>
+      	</div>
+	  {% endif %}
+	  </div>	   
+	   
+	  </div>
+    </header>

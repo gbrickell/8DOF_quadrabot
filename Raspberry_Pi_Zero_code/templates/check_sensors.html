@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <!-- version: 01.00 -->
+  <!-- file name: check_sensors.html -->
+  <!-- walking robot controller check sensors HTML  -->
+  <!-- Author: Enmore  -->
+  <!-- Date: 220329 -->
+
+{% extends 'quadrabot_layout.html' %}
+
+{% block content %}  
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="checksensors container">
+
+    <!-- zero row of the checksensors interface: introductory text -->
+	<div class=zero row">
+      <div style="margin-top: 3%; width: auto; padding-left: 15%; padding-right: 15%; text-align: center; font-size: 18px;">
+        <p style="font-size: 24px;">Ultrasonic sensor checking screen</p>
+		{% if abort_read == "yes" %}<p>Missed timestamp - reading aborted</p>
+		{% elif too_short == "yes" %}<p>Distance too short to take a reading</p>
+		{% else %}<p>Echo detection reading: {{ echo_distance }}cm</p>
+		{% endif %}
+		<p>click the button below to take a new reading</p>
+      </div>
+    </div>
+
+    <!-- 1st row of the checksensors interface: pinEcho -->
+	<div class="first row">
+      <div style="margin-top: 3%; width: auto; padding-left: 15%; padding-right: 15%;">
+        <a class="button button-primary u-full-width" href="/check_sensors/check_echo">get new echo detector reading</a>
+      </div>
+    </div>
+
+    <!-- 2nd row of the check sensors interface: back to select or go to maintain  -->
+	<div class="second row">
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width " href="/">select new mode</a>
+      </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width " href="/maintenance_mode">go to system maintenance</a>
+      </div>
+    </div>
+
+  </div>
+<br/><br/><br/>
+
+{% endblock %}
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->

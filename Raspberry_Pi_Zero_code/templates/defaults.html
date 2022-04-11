@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+  <!-- version: 01.00 -->
+  <!-- file name: defaults.html -->
+  <!-- walking robot controller default parameters HTML  -->
+  <!-- Author: Enmore  -->
+  <!-- Date: 220329 -->
+
+{% extends 'quadrabot_layout.html' %}
+
+{% block content %}  
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="defaults container">
+
+    <!-- zero row of the defaults interface: introductory text -->
+	<div class=zero row">
+      <div style="margin-top: 3%; width: auto; padding-left: 10%; padding-right: 10%;">
+        <p>Below are the current values for a number of system parameters - these should not normally be changed!.</p>
+      </div>
+    </div>
+
+    <!-- 1st row of the defaults interface: back to select or maintain  -->
+	<div class="first row">
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width " href="/">select new mode</a>
+      </div>
+      <div class="one-half column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width " href="/maintenance_mode">system maintenance</a>
+      </div>
+    </div>
+
+
+	<!-- 2nd row of the defaults interface: pinTrigger -->
+	<div class="second row">
+	  <form action="/reset_defaults/update_pintrigger" method="get">
+      <div class="three-quarters column" style="margin-top: 3px; text-align: center; font-size: 18px;">
+        GPIO pinTrigger default value: <input id="pin_trig" name="pintrig" size="6" type="text" value='{{ pin_trigger }}' />
+        &nbsp; &nbsp; <input name="submit" type="submit" value=' update ' />
+      </div>
+	  </form>
+    </div>
+
+    <!-- 3rd row of the defaults interface: pinEcho -->
+	<div class="third row">
+	  <form action="/reset_defaults/update_pinecho" method="get">
+      <div class="three-quarters column" style="margin-top: 3px; text-align: center; font-size: 18px;">
+        GPIO pinEcho default value: <input id="pin_ech" name="pinecho" size="6" type="text" value='{{ pin_echo }}' />
+        &nbsp; &nbsp; <input name="submit" type="submit" value=' update ' />
+      </div>
+	  </form>
+    </div>
+
+    <!-- 4th row of the defaults interface: onoff slide switch pin -->
+	<div class="fourth row">
+	  <form action="/reset_defaults/update_pinonoff" method="get">
+      <div class="three-quarters column" style="margin-top: 3px; text-align: center; font-size: 18px;">
+        GPIO onoff default value: <input id="pin_offon" name="pinonoff" size="6" type="text" value='{{ pin_onoff }}' />
+        &nbsp; &nbsp; <input name="submit" type="submit" value=' update ' />
+      </div>
+	  </form>
+    </div>
+
+    <!-- 5th row of the defaults interface: auto_demo slide switch pin -->
+	<div class="fifth row">
+	  <form action="/reset_defaults/update_pinautodemo" method="get">
+      <div class="three-quarters column" style="margin-top: 3px; text-align: center; font-size: 18px;">
+        GPIO auto_demo default value: <input id="pin_demoauto" name="pinautodemo" size="6" type="text" value='{{ pin_auto_demo }}' />
+        &nbsp; &nbsp; <input name="submit" type="submit" value=' update ' />
+      </div>
+	  </form>
+    </div>
+
+    <!-- 6th row of the defaults interface: web slide switch pin -->
+	<div class="sixth row">
+	  <form action="/reset_defaults/update_pinweb" method="get">
+      <div class="three-quarters column" style="margin-top: 3px; text-align: center; font-size: 18px;">
+        GPIO web default value: <input id="pin_webonoff" name="pinweb" size="6" type="text" value='{{ pin_web }}' />
+        &nbsp; &nbsp; <input name="submit" type="submit" value=' update ' />
+      </div>
+	  </form>
+    </div>
+
+
+    <!-- 7th row of the defaults interface: HowNear -->
+	<div class="seventh row">
+	  <form action="/reset_defaults/update_hownear" method="get">
+      <div class="three-quarters column" style="margin-top: 3px; text-align: center; font-size: 18px;">
+        HowNear default value: <input id="hownear_id" name="hownear" size="6" type="text" value='{{ how_near }}' />
+        &nbsp; &nbsp; <input name="submit" type="submit" value=' update ' />
+      </div>
+	  </form>
+    </div>
+
+    <!-- 8th row of the defaults interface: ReverseCycles -->
+	<div class="eighth row">
+	  <form action="/reset_defaults/update_revcycles" method="get">
+      <div class="three-quarters column" style="margin-top: 3px; text-align: center; font-size: 18px;">
+        ReverseCycles default value: <input id="rev_cycles" name="revcycles" size="6" type="text" value='{{ reverse_cycles }}' />
+        &nbsp; &nbsp; <input name="submit" type="submit" value=' update ' />
+      </div>
+	  </form>
+    </div>
+
+    <!-- 9th row of the defaults interface: TurnCycles -->
+	<div class="nineth row">
+	  <form action="/reset_defaults/update_turncycles" method="get">
+      <div class="three-quarters column" style="margin-top: 3px; text-align: center; font-size: 18px;">
+        TurnCycles default value: <input id="turncycles_id" name="turncycles" size="6" type="text" value='{{ turn_cycles }}' />
+        &nbsp; &nbsp; <input name="submit" type="submit" value=' update ' />
+      </div>
+	  </form>
+    </div>
+
+    <!-- 10th row of the defaults interface: Alternate -->
+	<div class="tenth row">
+	  <form action="/reset_defaults/update_alternate" method="get">
+      <div class="three-quarters column" style="margin-top: 3px; text-align: center; font-size: 18px;">
+        Alternate default value: <input id="alternate_id" name="alternate" size="6" type="text" value='{{ alt_times }}' />
+        &nbsp; &nbsp; <input name="submit" type="submit" value=' update ' />
+      </div>
+	  </form>
+    </div>
+
+  </div>
+<br/><br/><br/>
+
+{% endblock %}
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <!-- version: 01.00 -->
+  <!-- file name: autonomous_mode.html -->
+  <!-- quadrabot walking robot controller autonomous mode option HTML  -->
+  <!-- Author: Enmore  -->
+  <!-- Date: 220329 -->
+
+{% extends 'quadrabot_layout.html' %}
+
+{% block content %}  
+  
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="autonomous container">
+
+    <!-- 1st row of the autonomous interface: options to stop or go  -->
+	<div class="first row">
+      <div class="one-half column" style="margin-top: 3%; margin-left: 4%;">
+        <a class="button button-primary u-full-width" href="/autonomous_mode/go">Go</a>
+      </div>
+	  <div class="one-half column" style="margin-top: 3%; margin-left: 4%;">
+        <a class="button button-primary u-full-width" href="/autonomous_mode/stop">Stop</a>
+      </div>
+    </div>
+
+  	<!-- 2nd row of the autonomous interface: select new mode -->
+	<div class="second row">
+      <div class="one-third column" style="margin-top: 3%">
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+        <a class="button button-primary u-full-width" href="/">Select new mode</a>
+      </div>
+      <div class="one-third column" style="margin-top: 3%">
+      </div>
+    </div>
+
+  </div>
+
+
+{% endblock %}
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
