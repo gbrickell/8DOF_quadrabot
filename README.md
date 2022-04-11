@@ -30,7 +30,7 @@ The Flask web server is run in a separate Python routine on the Pi Zero and it '
 It should be noted that a small amount of 'C' code is provided, controlled from the Python code, to allow the servos to be driven at the best possible speed. The supplied custom libquadrabot_servo.so code, underpinned by an installed libPCA9685 library (see https://github.com/edlins/libPCA9685 for details), was compiled on a Raspberry Pi Zero 2 - so may need to be recompiled for a different SBC. The compilation command used is as follows:
 gcc -shared -o /home/pi/quadrabot/libquadrabot_servo.so -fPIC /home/pi/quadrabot/quadrabot_servo.c -I/usr/local/include -L/usr/local/lib -lPCA9685
 
-The wireless controller functions are underpinned by the cross-platform Python 'inputs' module from <a href="https://github.com/zeth/inputs" target="_blank">here, but for convenience the module code is included.
+The wireless controller functions are underpinned by the cross-platform Python 'inputs' module from <a href="https://github.com/zeth/inputs" target="_blank">here</a>, but for convenience the module code is included.
 
 Additional component Python test routines are also supplied to check out:
 - OLED operation
