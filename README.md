@@ -13,7 +13,7 @@ This 'quadrabot' is built using 3D printed components that house:
 - a 22mm diameter rechargeable battery bank that powers the Raspberry Pi, and
 - a 4xAA battery holder for 4 rechargeable AA batteries that power the servos
 
- Full details about the project are published at <a href="https://onlinedevices.co.uk/PiZero+8DOF+walking+robot+overview" target="_blank" >this link</a> and the designs for all the associated 3D printed components can be downloaded from <a href="https://www.printables.com/model/155945-four-legged-8dof-robot" target="_blank">here. It should be noted that the overall assembly has been evolved over an extended period of time with the wireless controller ‘dongle’ holder and OLED 'bolted on' to an earlier overall arrangement, so some 'consolidation' of the 3D print designs would certainly be possible!ign, so some 'consolidation' of the 3D print designs would certainly be possible!
+ Full details about the project are published at <a href="https://onlinedevices.co.uk/PiZero+8DOF+walking+robot+overview" target="_blank" >this link</a> and the designs for all the associated 3D printed components can be downloaded from <a href="https://www.printables.com/model/155945-four-legged-8dof-robot" target="_blank">here</a>. It should be noted that the overall assembly has been evolved over an extended period of time with the wireless controller ‘dongle’ holder and OLED 'bolted on' to an earlier overall arrangement, so some 'consolidation' of the 3D print designs would certainly be possible!ign, so some 'consolidation' of the 3D print designs would certainly be possible!
 
 The set of code and related material provided here is for a Raspberry Pi Zero computer and the current versions have been developed/tested using the Bullseye OS. 
 
