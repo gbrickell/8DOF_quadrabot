@@ -1,7 +1,7 @@
 # A Raspberry Pi Zero managed, 4-legged, 8DOF walking robot
 ## Documentation, example code and related data/image files for an 8 degrees of freedom walking robot managed by a Raspberry Pi Zero
 
- &nbsp; &nbsp; <img src="images/8DOF_quadrabot_20220329_103800232_600ww.jpg" width="600" height="517">
+ &nbsp; &nbsp; <img src="images/8DOF_quadrabot_20220329_103800232_600w.jpg" width="600" height="517">
 
 This 'quadrabot' is built using 3D printed components that house:
 - the Raspberry Pi Zero controller (a Mk2 version has been used)
