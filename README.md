@@ -17,7 +17,7 @@ This 'quadrabot' is built using 3D printed components that house:
 
 The set of code and related material provided here is for a Raspberry Pi Zero computer and the current versions have been developed/tested using the Bullseye OS. 
 
-The quadrabot's servos move the four legs, each with a 'hip' and 'knee' joint where the movement mechanism or 'gait' is best described as a creeping style, and a spreadsheet is provided in the documentation folder that tabulates how a defined set of leg movements are converted into a set of individual servo movements that are then used in the code to create 'walking' functions. Alsoprovided in the documentation folder is a PDF providing detailed build and usage notes.
+The quadrabot's servos move the four legs, each with a 'hip' and 'knee' joint where the movement mechanism or 'gait' is best described as a creeping style, and a spreadsheet is provided in the documentation folder that tabulates how a defined set of leg movements are converted into a set of individual servo movements that are then used in the code to create 'walking' functions. Also provided in the documentation folder is a PDF providing detailed build and usage notes.
 
 All the code is assumed to be in a /home/pi/quadrabot/ folder on the Pi, and the main Python code uses a set of slide switches to 'set' and switch on/off a number of different operating modes as follows:
 - <b>demo mode</b>: stand-alone operation that runs through a set series of 'moves' 
@@ -28,6 +28,7 @@ All the code is assumed to be in a /home/pi/quadrabot/ folder on the Pi, and the
 The Flask web server is run in a separate Python routine on the Pi Zero and it 'talks' to the main Python code via short text messages that are 'written to'/'read from' a ram drive that is set up by the main Python routine. Both the main code and the web code are automatically run on the Raspberry Pi Zero from boot up using a cron.
 
 It should be noted that a small amount of 'C' code is provided, controlled from the Python code, to allow the servos to be driven at the best possible speed. The supplied custom libquadrabot_servo.so code, underpinned by an installed libPCA9685 library (see https://github.com/edlins/libPCA9685 for details), was compiled on a Raspberry Pi Zero 2 - so may need to be recompiled for a different SBC. The compilation command used is as follows:
+
 gcc -shared -o /home/pi/quadrabot/libquadrabot_servo.so -fPIC /home/pi/quadrabot/quadrabot_servo.c -I/usr/local/include -L/usr/local/lib -lPCA9685
 
 The wireless controller functions are underpinned by the cross-platform Python 'inputs' module from <a href="https://github.com/zeth/inputs" target="_blank">here</a>, but for convenience the module code is included.
@@ -38,6 +39,6 @@ Additional component Python test routines are also supplied to check out:
 - wireless controller operation (<i>robot_control_all_inputs.py</i>)
 - ultrasonic sensor performance (<i>sensor-distance02.py</i>)
 - individual servo movement so that settings for each servo can be calibrated and the values in the code adjusted (<i>I2C_servo_test.py</i>)
-- walking operaion with each type being run in 'slow motion' so it can be visually checked (<i>walking_tests.py</i>), and
-- servo position calibration, allowing the servo horns to be 'locked' onto the servo splined drives at the approriate locations (<i>servo_reset.py</i>)
+- walking operation with each movement type being run in 'slow motion' so it can be visually checked (<i>walking_tests.py</i>), and
+- servo position calibration, allowing the servo horns to be 'locked' onto the servo splined drives at the appropriate locations (<i>servo_reset.py</i>)
 
